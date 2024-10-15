@@ -2,6 +2,7 @@
 import BookCard from "@/app/Components/BookCard";
 import Navbar from "@/app/Components/Navbar";
 import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function Wishlist() {
   const [wishlist, setWishlist] = useState([]);
