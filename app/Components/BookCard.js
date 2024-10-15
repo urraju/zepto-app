@@ -1,9 +1,18 @@
+"use client";
 import Link from "next/link";
 import WishlistButton from "./WishlistButton";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function BookCard({ book, onRemove }) {
+  useEffect(() => {
+    AOS.init({ disable: "phone", duration: 700 });
+  });
   return (
-    <div className="p-3 rounded-md shadow border overflow-hidden relative h-[430px]">
+    <div
+      className="p-3 rounded-md shadow border overflow-hidden relative h-[430px]"
+      data-aos="zoom-in-up"
+    >
       <div className="relative overflow-hidden rounded-md">
         <img
           src={book.formats["image/jpeg"]}

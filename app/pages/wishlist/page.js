@@ -2,7 +2,6 @@
 import BookCard from "@/app/Components/BookCard";
 import Navbar from "@/app/Components/Navbar";
 import { useState, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 export default function Wishlist() {
   const [wishlist, setWishlist] = useState([]);
@@ -20,7 +19,7 @@ export default function Wishlist() {
 
   return (
     <>
-      <Toaster /> 
+      <Toaster />
       <div className="container mx-auto">
         <Navbar />
         <div className="px-3 lg:px-0 container mx-auto py-20">
